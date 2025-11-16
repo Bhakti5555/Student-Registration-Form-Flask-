@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f8f8;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>All Registered Students</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Branch</th>
+            <th>Year</th>
+            <th>Phone</th>
+        </tr>
+
+        {% for s in students %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+            <td>{{ s[4] }}</td>
+            <td>{{ s[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style="margin-top: 20px;">
+    <a href="/" style="
+        text-decoration:none;
+        padding:10px 20px;
+        background:#4CAF50;
+        color:white;
+        border-radius:6px;
+        font-size:16px;
+    "> Back to Home</a>
+</div>
+
+
+</body>
+</html>

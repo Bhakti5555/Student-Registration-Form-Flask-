@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Student</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f8f8;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .box {
+            width: 40%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Search Student by Roll No</h2>
+
+    <form method="POST">
+        <input type="number" name="roll" placeholder="Enter Roll Number" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <div style="margin-top: 20px;">
+    <a href="/" style="
+        text-decoration:none;
+        padding:10px 20px;
+        background:#4CAF50;
+        color:white;
+        border-radius:6px;
+        font-size:16px;
+    "> Back to Home</a>
+</div>
+
+    {% if student %}
+    <div class="box">
+        <h3>Student Details</h3>
+        <p><b>ID:</b> {{ student[0] }}</p>
+        <p><b>Name:</b> {{ student[1] }}</p>
+        <p><b>Roll No:</b> {{ student[2] }}</p>
+        <p><b>Branch:</b> {{ student[3] }}</p>
+        <p><b>Year:</b> {{ student[4] }}</p>
+        <p><b>Phone:</b> {{ student[5] }}</p>
+    </div>
+    {% elif student == None and request.method == 'POST' %}
+    <p> No student found.</p>
+    {% endif %}
+
+
+
+</body>
+</html>

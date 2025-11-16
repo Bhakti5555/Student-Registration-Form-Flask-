@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration Form</h2>
+
+        <form method="POST" action="/student">
+
+            <input type="text" name="name" placeholder="Full Name" required><br>
+
+            <input type="number" name="roll" placeholder="Roll Number" required><br>
+
+            <input type="text" name="branch" placeholder="Branch" required><br>
+
+            <input type="number" name="year" placeholder="Year Of Joining" required><br>
+
+            <input type="text" name="phone" placeholder="Phone Number" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div style="margin-top: 20px;">
+    <a href="/" style="
+        text-decoration:none;
+        padding:10px 20px;
+        background:#4CAF50;
+        color:white;
+        border-radius:6px;
+        font-size:16px;
+    ">Back to Home</a>
+</div>
+
+
+    </div>
+
+</body>
+</html>
